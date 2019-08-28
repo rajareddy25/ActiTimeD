@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="ChromeTest(failed)" parallel="tests">
+    <parameter name="nodeurl" value="http://192.168.1.22:4444/wd/hub"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="appurl" value="https://demo.actitime.com"/>
+    <classes>
+      <class name="Com.ActiTime.Tests.VerifyversionTest">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+          <include name="Verifyversion"/>
+        </methods>
+      </class> <!-- Com.ActiTime.Tests.VerifyversionTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="firefoxTest(failed)" parallel="tests">
+    <parameter name="nodeurl" value="http://192.168.1.22:4444/wd/hub"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appurl" value="https://demo.actitime.com"/>
+    <classes>
+      <class name="Com.ActiTime.Tests.VerifyversionTest">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+          <include name="Verifyversion"/>
+        </methods>
+      </class> <!-- Com.ActiTime.Tests.VerifyversionTest -->
+      <class name="Com.ActiTime.Tests.ValidLoginLogoutTest">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+          <include name="ValidLoginLogout"/>
+        </methods>
+      </class> <!-- Com.ActiTime.Tests.ValidLoginLogoutTest -->
+    </classes>
+  </test> <!-- firefoxTest(failed) -->
+  <test thread-count="5" name="IETest(failed)" parallel="tests">
+    <parameter name="nodeurl" value="http://192.168.1.22:4444/wd/hub"/>
+    <parameter name="browser" value="internet explorer"/>
+    <parameter name="appurl" value="https://demo.actitime.com"/>
+    <classes>
+      <class name="Com.ActiTime.Tests.VerifyversionTest">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+          <include name="Verifyversion"/>
+        </methods>
+      </class> <!-- Com.ActiTime.Tests.VerifyversionTest -->
+      <class name="Com.ActiTime.Tests.InvalidLoginTest">
+        <methods>
+          <include name="postcondition"/>
+          <include name="InvalidLogin"/>
+          <include name="precondition"/>
+        </methods>
+      </class> <!-- Com.ActiTime.Tests.InvalidLoginTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
